@@ -5,8 +5,8 @@ import pandas_datareader as web
 import datetime as dt
 
 from sklearn.preprocessing import MinMaxScaler
-# from tensorflow.keras.model import Sequential
-# from tensorflow.keras.layers import Dense, Dropout, LSTM
+from tensorflow.keras.model import Sequential
+from tensorflow.keras.layers import Dense, Dropout, LSTM
 
 # Load Data
 company = "FB"
@@ -32,3 +32,8 @@ for x in range(prediction_days, len(scaled_data)):
 
 x_train, y_train = np.array(x_train), np.array(y_train)
 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+
+# Build the Model
+
+model = Sequential()
+model
